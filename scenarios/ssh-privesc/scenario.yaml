@@ -1,0 +1,19 @@
+name: ssh-privesc
+target:
+  hostname: web-01
+services:
+  - nginx
+  - ssh
+  - postgres
+users:
+  - deploy
+  - analyst
+  - backup
+vulnerabilities:
+  - writable_deployment_component
+background_activity:
+  enabled: true
+telemetry:
+  authentication: true
+  process: true
+  network: true

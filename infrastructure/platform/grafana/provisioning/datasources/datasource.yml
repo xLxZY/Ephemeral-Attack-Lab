@@ -1,0 +1,14 @@
+apiVersion: 1
+datasources:
+  - name: Elasticsearch
+    uid: cyberlab-es
+    type: elasticsearch
+    access: proxy
+    url: http://elasticsearch:9200
+    isDefault: true
+    jsonData:
+      index: cyberlab-events
+      timeField: timestamp
+      esVersion: 8.0.0
+      logMessageField: event_type
+      logLevelField: severity

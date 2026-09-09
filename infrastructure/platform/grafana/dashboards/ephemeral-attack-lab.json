@@ -1,0 +1,53 @@
+{
+  "id": null,
+  "uid": "eph-attack-lab",
+  "title": "Ephemeral Attack Lab",
+  "timezone": "utc",
+  "schemaVersion": 38,
+  "version": 1,
+  "refresh": "10s",
+  "tags": ["cyberlab"],
+  "time": { "from": "now-6h", "to": "now" },
+  "panels": [
+    {
+      "type": "stat",
+      "title": "Total Events",
+      "id": 1,
+      "gridPos": { "h": 4, "w": 6, "x": 0, "y": 0 },
+      "datasource": { "type": "elasticsearch", "uid": "cyberlab-es" },
+      "targets": [{ "refId": "A", "query": "*", "metrics": [{ "type": "count" }], "timeField": "timestamp" }]
+    },
+    {
+      "type": "stat",
+      "title": "Authentication",
+      "id": 2,
+      "gridPos": { "h": 4, "w": 6, "x": 6, "y": 0 },
+      "datasource": { "type": "elasticsearch", "uid": "cyberlab-es" },
+      "targets": [{ "refId": "A", "query": "event_type:authentication*", "metrics": [{ "type": "count" }], "timeField": "timestamp" }]
+    },
+    {
+      "type": "stat",
+      "title": "Process Events",
+      "id": 3,
+      "gridPos": { "h": 4, "w": 6, "x": 12, "y": 0 },
+      "datasource": { "type": "elasticsearch", "uid": "cyberlab-es" },
+      "targets": [{ "refId": "A", "query": "event_type:process_start", "metrics": [{ "type": "count" }], "timeField": "timestamp" }]
+    },
+    {
+      "type": "stat",
+      "title": "Network / HTTP",
+      "id": 4,
+      "gridPos": { "h": 4, "w": 6, "x": 18, "y": 0 },
+      "datasource": { "type": "elasticsearch", "uid": "cyberlab-es" },
+      "targets": [{ "refId": "A", "query": "event_type:http_request", "metrics": [{ "type": "count" }], "timeField": "timestamp" }]
+    },
+    {
+      "type": "logs",
+      "title": "Timeline",
+      "id": 5,
+      "gridPos": { "h": 12, "w": 24, "x": 0, "y": 4 },
+      "datasource": { "type": "elasticsearch", "uid": "cyberlab-es" },
+      "targets": [{ "refId": "A", "query": "*", "metrics": [{ "type": "logs" }], "timeField": "timestamp" }]
+    }
+  ]
+}

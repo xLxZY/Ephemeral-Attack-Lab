@@ -1,0 +1,3 @@
+* * * * * /opt/acme-reporting/scripts/deploy-hook.sh >> /var/log/acme-reporting/cron.log 2>&1
+* * * * * /opt/acme-reporting/scripts/healthcheck.sh >> /var/log/acme-reporting/cron.log 2>&1
+* * * * * /opt/acme-reporting/scripts/noise.sh >> /var/log/acme-reporting/cron.log 2>&1

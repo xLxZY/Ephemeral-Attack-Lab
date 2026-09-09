@@ -1,0 +1,1 @@
+*/2 * * * * /opt/acme-reporting/scripts/backup.sh >> /var/log/acme-reporting/backup.log 2>&1
