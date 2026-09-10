@@ -18,20 +18,8 @@ CLI → orchestrator → Terraform → Docker network → attacker-01 + web-01 �
 
 Docker, Python (Typer), Terraform, Elasticsearch, Grafana.
 
-## Quick start (VM)
+#grafana got some issues in the integration and not working RN.
 
-See `docs/deployment.md`. Short path:
-
-```bash
-make build-target
-make build-attacker
-make platform-up
-python3 -m venv .venv && source .venv/bin/activate && pip install -e .
-cyberlab create --scenario ssh-privesc
-cyberlab shell attacker lab-001
-cyberlab collect lab-001
-cyberlab report lab-001
-cyberlab destroy lab-001
 ## Security warning
 
 Run only in a dedicated VM. Do not publish lab ports to your LAN. Do not point attacker tools at any host except the lab target IP. Lab passwords are fake and lab-scoped. Attacker and target must not receive the Docker socket, host mounts, host network, or privileged mode.
