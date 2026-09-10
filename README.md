@@ -18,7 +18,7 @@ CLI → orchestrator → Terraform → Docker network → attacker-01 + web-01 �
 
 Docker, Python (Typer), Terraform, Elasticsearch, Grafana.
 
-# grafana got some issues in the integration and not working RN so there is no reports XD.
+# grafana got some issues in the integration and not working RN so there is no reports XD but  other stuff works well.
 
 ## Security warning
 
