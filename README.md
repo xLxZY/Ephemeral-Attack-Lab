@@ -1,3 +1,4 @@
+- not completely finished 
 # Ephemeral Attack Lab
 
 Python- and Terraform-driven platform that creates a short-lived isolated Docker lab: security workstation `attacker-01` and company server `web-01`. Telemetry goes to Elasticsearch, Grafana visualizes it, evidence is written to disk, then the lab is destroyed.
