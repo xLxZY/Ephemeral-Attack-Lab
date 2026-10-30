@@ -32,3 +32,5 @@ Single-host Docker. One scenario. Elasticsearch security disabled for the privat
 ## Future work
 
 Additional scenarios only after this loop is stable: web compromise, backup misconfiguration, internal pivot.
+
+<img width="7329" height="9352" alt="diagram (1)" src="https://github.com/user-attachments/assets/5012a9da-c1ba-4987-b773-f941ff5e1391" />
